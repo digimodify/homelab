@@ -1,0 +1,16 @@
+---
+- Repositories:
+  - Homelab:
+    - icon: si-github-#FFFFFF
+      href: https://github.com/example
+      description: Example repository
+- Cloud Services:
+  - Example:
+    - icon: si-example-#FFFFFF
+      href: https://cloud.example.com
+      description: Example cloud service
+- Cloud Platforms:
+  - ExampleCloud:
+    - icon: si-examplecloud-#FFFFFF
+      href: https://www.examplecloud.com
+      description: Example cloud platform

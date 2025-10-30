@@ -1,0 +1,235 @@
+---
+
+- Infrastructure:
+    - Proxmox:
+        href: {{HOMEPAGE_VAR_PROXMOX_URL}}
+        icon: proxmox.png
+        description: Proxmox (cluster)
+        siteMonitor: {{HOMEPAGE_VAR_PROXMOX_URL}}
+        widget:
+            type: proxmox
+            url: {{HOMEPAGE_VAR_PROXMOX_URL}}
+            username: {{HOMEPAGE_VAR_PROXMOX_USERNAME}}
+            password: {{HOMEPAGE_VAR_PROXMOX_PASSWORD}}
+    - Proxmox Backup Server:
+        href: {{HOMEPAGE_VAR_PBS_URL}}
+        description: Backup server (Proxmox Backup Server)
+        siteMonitor: {{HOMEPAGE_VAR_PBS_URL}}
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/proxmox-light.svg
+        widget:
+            type: proxmoxbackupserver
+            url: {{HOMEPAGE_VAR_PBS_URL}}
+            username: {{HOMEPAGE_VAR_PBS_USERNAME}}
+            password: {{HOMEPAGE_VAR_PBS_PASSWORD}}
+    - Portainer:
+        href:  {{HOMEPAGE_VAR_PORTAINER_URL}}     
+        icon: portainer.png
+        description: Portainer (container UI)
+        siteMonitor: {{HOMEPAGE_VAR_PORTAINER_URL}}
+        widget:
+            type: portainer
+            url: {{HOMEPAGE_VAR_PORTAINER_URL}}
+            env: 3
+            key: {{HOMEPAGE_VAR_PORTAINER_KEY}}
+    - Nginx Proxy Manager:
+        href: {{HOMEPAGE_VAR_NPM_URL}}
+        icon: nginx-proxy-manager.png
+        siteMonitor: {{HOMEPAGE_VAR_NPM_URL}}
+        description: Nginx Proxy Manager (reverse proxy)
+        widget:
+            type: npm
+            url: {{HOMEPAGE_VAR_NPM_URL}}
+            username: {{HOMEPAGE_VAR_NPM_USERNAME}}
+            password: {{HOMEPAGE_VAR_NPM_PASSWORD}}
+
+- Networking:
+    - Unifi Controller:
+        href: {{HOMEPAGE_VAR_UNIFI_URL}}
+        siteMonitor: {{HOMEPAGE_VAR_UNIFI_URL}}
+        description: UniFi Network Controller
+        icon: unifi.png
+        widget:
+            type: unifi
+            url: {{HOMEPAGE_VAR_UNIFI_URL}}
+            username: {{HOMEPAGE_VAR_UNIFI_USERNAME}}
+            password: {{HOMEPAGE_VAR_UNIFI_PASSWORD}}
+    - Wireguard:
+        href: {{HOMEPAGE_VAR_WIREGUARD_URL}}
+        description: WireGuard (VPN)
+        siteMonitor: {{HOMEPAGE_VAR_WIREGUARD_URL}}
+        icon: wireguard.png
+    - AdGuard Home:
+        href: {{HOMEPAGE_VAR_ADGUARD_HOME_URL}}
+        description: DNS sinkhole (AdGuard Home)
+        icon: adguard-home.png
+        siteMonitor: {{HOMEPAGE_VAR_ADGUARD_HOME_URL}}
+        widget:
+            type: adguard
+            url: {{HOMEPAGE_VAR_ADGUARD_HOME_URL}}
+            username: {{HOMEPAGE_VAR_ADGUARD_HOME_USERNAME}}
+            password: {{HOMEPAGE_VAR_ADGUARD_HOME_PASSWORD}}
+    - phpIPAM:
+        href: {{HOMEPAGE_VAR_PHPIPAM_URL}}
+        description: IPAM (phpIPAM)
+        icon: phpipam.png
+        siteMonitor: {{HOMEPAGE_VAR_PHPIPAM_URL}}
+
+- Monitoring:
+    - UptimeKuma:
+        href: {{HOMEPAGE_VAR_UPTIMEKUMA_URL}}
+        siteMonitor: {{HOMEPAGE_VAR_UPTIMEKUMA_URL}}
+        description: Uptime monitoring (UptimeKuma)
+        icon: uptime-kuma.png        
+        widget:
+            type: uptimekuma
+            url: {{HOMEPAGE_VAR_UPTIMEKUMA_URL}}
+            slug: proxmox
+            username: {{HOMEPAGE_VAR_UPTIMEKUMA_USERNAME}}
+            password: {{HOMEPAGE_VAR_UPTIMEKUMA_PASSWORD}}
+    - Prometheus:
+        href: {{HOMEPAGE_VAR_PROMETHEUS_URL}}
+        description: Prometheus (metrics)
+        siteMonitor: {{HOMEPAGE_VAR_PROMETHEUS_URL}}
+        icon: prometheus.png
+        server: {{HOMEPAGE_VAR_PROXMOX_ENDPOINT}}
+        widget:
+            type: prometheus
+            url: {{HOMEPAGE_VAR_PROMETHEUS_URL}}
+    - Grafana:
+        href: {{HOMEPAGE_VAR_GRAFANA_URL}}
+        description: Grafana (dashboards)
+        siteMonitor: {{HOMEPAGE_VAR_GRAFANA_URL}}
+        icon: grafana.png
+        widget:
+            type: grafana
+            version: 1
+            url: {{HOMEPAGE_VAR_GRAFANA_URL}}
+            username: {{HOMEPAGE_VAR_GRAFANA_USERNAME}}
+            password: {{HOMEPAGE_VAR_GRAFANA_PASSWORD}}
+
+- Tools:
+    - Gitea:
+        href: {{HOMEPAGE_VAR_GITEA_URL}}
+        description: Git hosting (Gitea)
+        siteMonitor: {{HOMEPAGE_VAR_GITEA_URL}}
+        icon: gitea.png
+        widget:
+            type: gitea
+            url: {{HOMEPAGE_VAR_GITEA_URL}}
+            key: {{HOMEPAGE_VAR_GITEA_KEY}} 
+    - Authentik:
+        href: {{HOMEPAGE_VAR_AUTHENTIK_URL}}
+        description:
+        siteMonitor: {{HOMEPAGE_VAR_AUTHENTIK_URL}}
+        icon: authentik.png
+        widget:
+          type: authentik
+          url: {{HOMEPAGE_VAR_AUTHENTIK_URL}}
+          key: {{HOMEPAGE_VAR_AUTHENTIK_KEY}} 
+          version: 2
+
+- Media Management:
+    - Jellyfin:
+        href: {{HOMEPAGE_VAR_JELLYFIN_URL}}
+        description: Media server (Jellyfin)
+        siteMonitor: {{HOMEPAGE_VAR_JELLYFIN_URL}}
+        icon: jellyfin.png
+        widget:
+            type: jellyfin
+            url: {{HOMEPAGE_VAR_JELLYFIN_URL}}
+            key: {{HOMEPAGE_VAR_JELLYFIN_KEY}}
+    - Jellyseerr:
+        href: {{HOMEPAGE_VAR_JELLYSEERR_URL}}
+        description: Request manager (Jellyseerr)
+        siteMonitor: {{HOMEPAGE_VAR_JELLYSEERR_URL}}
+        icon: jellyseerr.png
+        widget:
+            type: jellyseerr
+            url: {{HOMEPAGE_VAR_JELLYSEERR_URL}}
+            key: {{HOMEPAGE_VAR_JELLYSEERR_KEY}}
+    - Bazarr:
+        href: {{HOMEPAGE_VAR_BAZARR_URL}}
+        description: Subtitles manager (Bazarr)
+        siteMonitor: {{HOMEPAGE_VAR_BAZARR_URL}}
+        icon: bazarr.png
+        widget:
+            type: bazarr
+            url: {{HOMEPAGE_VAR_BAZARR_URL}}
+            key: {{HOMEPAGE_VAR_BAZARR_KEY}}
+            enableQueue: true
+- Media Processing:
+    - Radarr:
+        href: {{HOMEPAGE_VAR_RADARR_URL}}
+        description: Movie automation (Radarr)
+        siteMonitor: {{HOMEPAGE_VAR_RADARR_URL}}
+        icon: radarr.png
+        widget:
+            type: radarr
+            url: {{HOMEPAGE_VAR_RADARR_URL}}
+            key: {{HOMEPAGE_VAR_RADARR_KEY}}
+            enableQueue: true
+  
+    - Sonarr:
+        href: {{HOMEPAGE_VAR_SONARR_URL}}
+        description: TV automation (Sonarr)
+        siteMonitor: {{HOMEPAGE_VAR_SONARR_URL}}
+        icon: sonarr.png
+        widget:
+            type: sonarr
+            url: {{HOMEPAGE_VAR_SONARR_URL}}
+            key: {{HOMEPAGE_VAR_SONARR_KEY}}
+            enableQueue: true
+    - Prowlarr:
+        href: {{HOMEPAGE_VAR_PROWLARR_URL}}
+        description: Indexer aggregator (Prowlarr)
+        siteMonitor: {{HOMEPAGE_VAR_PROWLARR_URL}}
+        icon: prowlarr.png
+        widget:
+            type: prowlarr
+            url: {{HOMEPAGE_VAR_PROWLARR_URL}}
+            key: {{HOMEPAGE_VAR_PROWLARR_KEY}}
+
+    - Qbittorrent:
+        href: {{HOMEPAGE_VAR_QBITTORRENT_URL}}
+        description: Torrent client (qBittorrent)
+        siteMonitor: {{HOMEPAGE_VAR_QBITTORRENT_URL}}
+        icon: qbittorrent.png
+        widget:
+            type: qbittorrent
+            url: {{HOMEPAGE_VAR_QBITTORRENT_URL}}
+            username: {{HOMEPAGE_VAR_QBITTORRENT_USERNAME}}
+            password: {{HOMEPAGE_VAR_QBITTORRENT_PASSWORD}}
+
+- Applications:
+    - Stirling-PDF:
+        href: {{HOMEPAGE_VAR_STIRLING_PDF_URL}}
+        description: PDF generation (Stirling-PDF)
+        siteMonitor: {{HOMEPAGE_VAR_STIRLING_PDF_URL}}
+        icon: stirling-pdf.png
+    - Paperless-NGX:
+        href: {{HOMEPAGE_VAR_PAPERLESS_NGX_URL}}
+        description: Document management (Paperless-NGX)
+        siteMonitor: {{HOMEPAGE_VAR_PAPERLESS_NGX_URL}}
+        icon: paperless-ng.png
+        widget:
+            type: paperlessngx
+            url: {{HOMEPAGE_VAR_PAPERLESS_NGX_URL}}
+            key: {{HOMEPAGE_VAR_PAPERLESS_NGX_KEY}}
+    - Home Assistant:
+        href: {{HOMEPAGE_VAR_HOMEASSISTANT_URL}}
+        description: Home automation (Home Assistant)
+        siteMonitor: {{HOMEPAGE_VAR_HOMEASSISTANT_URL}}
+        icon: home-assistant.png
+        widget:
+            type: homeassistant
+            url: {{HOMEPAGE_VAR_HOMEASSISTANT_URL}}
+            key: {{HOMEPAGE_VAR_HOMEASSISTANT_KEY}}
+    - Immich:
+        href: {{HOMEPAGE_VAR_IMMICH_URL}}
+        description: Photo management (Immich)
+        icon: immich.png
+        widget: # waiting on fix for broken api
+            type: immich
+            url: http://192.168.1.229:2283
+            key: {{HOMEPAGE_VAR_IMMICH_KEY}}
+            version: 2 

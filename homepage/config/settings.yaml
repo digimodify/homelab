@@ -1,0 +1,49 @@
+---
+title: Doomnet
+headerStyle: clean
+
+# --- Appearance ---------------------------------------------------------
+background:
+  image: https://images4.alphacoders.com/806/806712.jpg
+  blur: none
+  saturate: 75
+  brightness: 25
+  opacity: 25
+
+cardBlur: xs
+favicon: https://www.svgrepo.com/vectors/
+theme: dark
+color: neutral
+useEqualHeights: true
+showStats: true
+
+# --- Providers (use environment variables / templating) ------------------
+providers:
+  # OpenWeatherMap API key (templated)
+  openweathermap: {{HOMEPAGE_VAR_OPENWEATHERMAP_KEY}}
+
+# --- Quicklaunch / search -----------------------------------------------
+quicklaunch:
+  provider: custom
+  url: {{HOMEPAGE_VAR_QUICKLAUNCH_URL}}
+  target: _blank
+  suggestionUrl: {{HOMEPAGE_VAR_QUICKLAUNCH_SUGGESTION_URL}}
+
+# --- Layout / Sections --------------------------------------------------
+layout:
+  Infrastructure:
+    icon: mdi-server-#FFFFFF
+  Networking:
+    icon: mdi-lan-#FFFFFF
+  Monitoring:
+    icon: mdi-monitor-dashboard-#FFFFFF
+  Tools:
+    icon: mdi-tools-#FFFFFF
+  Media Management:
+    icon: mdi-play-box-multiple-#FFFFFF
+  Media Processing:
+    icon: mdi-folder-play-#FFFFFF
+  Applications:
+    icon: mdi-application-#FFFFFF
+
+# Notes: commit this template; environment-specific secrets should be provided via .secrets.env (gitignored)
