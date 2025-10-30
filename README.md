@@ -10,11 +10,12 @@ Navigation
 - [servarr](./servarr/) — media/App stacks: Gluetun (VPN), qBittorrent, Radarr, Sonarr, Jellyfin, and helpers. See `servarr/README.md` for details.
 
 Hardware
-- I will describe infra here (fill in CPU, RAM, storage, hypervisor/LXC/Docker host, network layout, VLANs, and IP addresses). Example fields you might include:
-  - Host machine: model, CPU, RAM, OS
-  - Storage layout: disks, RAID, mount points
-  - Network: bridge names, VLANs, subnet ranges
-  - Backup targets: NAS or cloud
+- Lenovo ThinkCentre M720q (primary) — 16GB RAM, 500GB
+- Intel NUC NUC8i5BEK ×2 (secondaries) — 16GB RAM, 500GB each
+- Intel NUC (NFS storage) — 500GB
+- TP-Link TL-SG108E (managed switch)
+- Ubiquiti UAP-AC-Pro (access point)
+- Backup target: external HDD + SSD
 
 Quick deploy guidance
 - Per-project READMEs contain project-specific deployment steps. Typical workflow:
@@ -39,26 +40,5 @@ Security & secrets
 - This repo should NOT contain secrets. Use `example.env` or `.env.example` files with placeholders and keep the real `.env` local. Add `.env` to your `.gitignore`.
 - Services that route traffic through a VPN (for example `qBittorrent` using `gluetun`) are configured intentionally for privacy — do not change network settings without understanding the implications.
 
-Suggested additional sections to add to this README
-- Inventory: list hardware, model numbers, serials, and firmware versions.
-- Network diagram: ASCII or an image showing subnet ranges, VLANs and device roles.
-- Backups: what to back up, where, frequency, restore steps.
-- Monitoring & alerts: metrics, dashboards, and alert rules (Prometheus, Grafana, UptimeRobot, etc.).
-- Secrets & Vault: how you store secrets (passphrases, Ansible Vault, Bitwarden, etc.).
-- Automation: scripts, cron jobs, or Ansible playbooks used to provision and maintain the lab.
-- Change log / Runbook: notable changes, maintenance windows, and runbook for common failures.
 
-Contributing
-- Prefer creating a branch and a pull request. Do not add real credentials or private keys to commits — use placeholders in committed example files.
 
-License
-- Add a LICENSE file at the repo root if you want to publish this publicly.
-
-Need help?
-- If you want, I can:
-  - generate a polished `.env.example` for each project (placeholders only),
-  - add a root-level `.gitignore` (ignoring `.env`, logs),
-  - create a network diagram stub or sample hardware inventory template.
-
-Fill in the hardware section and any project-specific notes and I'll update the README accordingly.
-# homelab
