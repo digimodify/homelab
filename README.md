@@ -24,7 +24,7 @@ Quick deploy guidance
   2. Copy the example environment file and edit local values (do NOT commit secrets):
 
      cp example.env .env
-     # edit .env with your private keys and host paths
+     edit .env with your private keys and host paths
 
   3. Create any required host directories and set permissions (update UID/GID as needed):
 
