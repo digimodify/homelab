@@ -1,4 +1,20 @@
-# servarr — simple deploy notes
+# Self-Hosted Media Server
+
+## Servarr Stack
+
+### Services included
+
+- `gluetun` — VPN client (WireGuard/OpenVPN) that routes container traffic through your VPN provider; provides a local HTTP proxy and port‑forwarding support.
+- `qbittorrent` — Torrent client (linuxserver/qbittorrent) configured to use gluetun's network (`network_mode: "service:gluetun"`).
+- `sabnzbd` — Usenet download client with a web UI (LinuxServer image).
+- `bazarr` — Subtitle downloader that integrates with Radarr/Sonarr.
+- `jellyfin` — Media server for serving video and audio to clients.
+- `jellyseerr` — Request manager for Jellyfin (request/approval workflow).
+- `prowlarr` — Indexer manager (search index orchestration for *Arr apps).
+- `radarr` — Movie library manager and automated movie downloader.
+- `sonarr` — TV series library manager and automated episode downloader.
+- `flaresolverr` — Cloudflare‑bypass proxy used by some indexers and scrapers.
+- `unpackerr` — Monitors download clients, extracts archives, and hands completed items to *Arr apps.
 
 This folder contains a docker-compose stack for a small media setup using Jellyfin and the "Arr" Stack
 
