@@ -5,11 +5,11 @@
 This repository contains configuration and docker-compose stacks used to run a compact home lab for media and other services.
 
 
-Navigation
+## Navigation
 - [homepage](./homepage/) — the main homepage/dashboard and its configuration (bookmarks, widgets, settings).
 - [servarr](./servarr/) — media/App stacks: Gluetun (VPN), qBittorrent, Radarr, Sonarr, Jellyfin, and helpers. See `servarr/README.md` for details.
 
-Hardware
+## Hardware
 - Lenovo ThinkCentre M720q (primary) — 16GB RAM, 500GB
 - Intel NUC NUC8i5BEK ×2 (secondaries) — 16GB RAM, 500GB each
 - Intel NUC (NFS storage) — 500GB
@@ -17,7 +17,7 @@ Hardware
 - Ubiquiti UAP-AC-Pro (access point)
 - Backup target: external HDD + SSD
 
-Quick deploy guidance
+## Quick deploy guidance
 - Per-project READMEs contain project-specific deployment steps. Typical workflow:
 
   1. Review the project's README. Example: `cd servarr && less README.md`.
@@ -36,7 +36,7 @@ Quick deploy guidance
 
      docker-compose up -d
 
-Security & secrets
+## Security & secrets
 - This repo should NOT contain secrets. Use `example.env` or `.env.example` files with placeholders and keep the real `.env` local. Add `.env` to your `.gitignore`.
 - Services that route traffic through a VPN (for example `qBittorrent` using `gluetun`) are configured intentionally for privacy — do not change network settings without understanding the implications.
 

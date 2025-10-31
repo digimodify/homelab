@@ -2,7 +2,7 @@
 
 This folder contains a docker-compose stack for a small media setup using Jellyfin and the "Arr" Stack
 
-Quick steps to deploy
+## Quick steps to deploy
 
 1. Create a local environment file from the example (do NOT commit the real `.env`):
 
@@ -20,12 +20,12 @@ Quick steps to deploy
 
    docker-compose up -d
 
-Notes
+## Notes
 - qBittorrent is configured to run inside the `gluetun` service network (`network_mode: "service:gluetun"`) so traffic is routed through the VPN — do not change this unless you understand the privacy implications.
 - Keep your real `.env` out of the repository; commit only `example.env` or `.env.example` with placeholders.
 - If the compose file uses `${VAR:?err}` and a variable is missing, Docker Compose will error; ensure required variables are set in `.env`.
 
-References
+## References
 - TechHutTV Jellyfin repo: https://github.com/TechHutTV/homelab/tree/main/media/jellyfin
 - TechHutTV Jellyfin setup: https://www.youtube.com/watch?v=eJvQKLVrmU8
 - BlueMonkey 4n6: https://youtu.be/uu9PvIBYrWk?si=YawIY_ATB1vvGiEK

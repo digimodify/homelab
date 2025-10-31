@@ -57,26 +57,7 @@ Homepage configuration notes
 - Proxmox community scripts (helper scripts used): https://community-scripts.github.io/ProxmoxVE/scripts
 - Homepage project: https://gethomepage.dev/
 - Example homelab repo used as reference: https://github.com/ChristianLempa/homelab/tree/main/homepage
-- YouTube setup videos referenced by user:
+- Youtube:
   - https://youtu.be/mC3tjysJ01E?si=EUpCFYTTmRZdGgon
   - https://youtu.be/j9kbQucNwlc?si=5y5U1D-rzgfb0LaL
 
-## Assumptions
-
-- Docker (and optionally Docker Compose) is installed on the host/container running the media stack.
-- Portainer is available for GUI-based container management (per `services.yaml`).
-- Secrets and credentials (the `HOMEPAGE_VAR_*` values) are managed outside the repo (environment variables, vault, or a `.env` file excluded from git).
-
-## Next steps / suggestions
-
-- Add a `config/example.env` (without secrets) that documents required `HOMEPAGE_VAR_*` variables.
-- A `config/example.env` has been added to this repo with the discovered variable names; fill values locally and DO NOT commit real secrets.
-- Add a short `docker-compose.yml` or a note pointing to where the Docker stack is defined (if not already present).
-- Consider documenting LXC templates or helper script commands used to build each container for reproducibility.
-- Add backup/restore instructions (Proxmox LXC snapshots, PBS procedures).
-
----
-
-- Add a `config/example.env` with the discovered variable names.
-- Add a short `docker-compose.yml` template for the media stack.
-- Expand troubleshooting with exact commands from your environment.
